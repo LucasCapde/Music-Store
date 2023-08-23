@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Proyecto Integrador - Etapa 1 | Carrito</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+          <!-- Logo y dirección -->
+
+          <div class="d-flex justify-content-around align-items-center">
+            <a class="inicio" href="../index.html">
+              <img class="logo" src="../img/logo-oscuro.png" alt="Logo">
+            </a>
+            <div class="ms-2">
+              <p class="m-0 text-center blanco" href="#">Enviar a Lucas<br></p>
+              <div class="d-flex align-items-center justify-content-center envio">
+                <i class="fa-solid fa-location-dot mx-1"></i>
+                <address class="m-0">San Martín 1234</address>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra de búsqueda -->
+          
+          <form class="d-flex w-50" role="search">
+            <input class="form-control me-auto" type="search" placeholder="Buscar artículos..." aria-label="Search">
+            <button type="button" class="btn btn-light" id="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          
+          <div class="d-flex w-25 justify-content-center align-items-center">
+            
+            <!-- Menú desplageable de idiomas -->
+            
+            <div class="dropdown">
+              <button class="btn dropdown-toggle me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../img/icons/españa.svg" width="20px" height="auto" alt="Bandera de España">ES
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="../img/icons/uk.svg" width="20px" height="auto" alt="Bandera de UK">EN
+                  </a>
+                </li>
+                
+                <li><hr class="dropdown-divider mx-1"></li>
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="../img/icons/portugal.svg" width="20px" height="auto" alt="Bandera de UK">PO
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Descarga la app e ingreso/crear usuario -->
+            
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2">Descarga la app</a>
+            <button type="button" class="btn me-3 p-0" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-regular fa-user hvr-pop"></i>
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header d-flex flex-column border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title fs-3 text-uppercase mb-3" id="exampleModalLabel">
+                      Disfrutá de los beneficios de Music Store al iniciar sesión
+                    </h2>
+                    <p class="fs-6">Conseguí cupones de descuento, productos exclusivos y promociones especiales.</p>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0">
+
+                  <div class="modal-body">
+                    <h3 class="fs-4 text-uppercase">Iniciar sesión</h3>
+                    <form class="row g-3">
+                      <div class="row-md-6">
+                        <label for="inputEmail4" class="form-label fs-5">Email<span>*</span></label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="usuario@ejemplo.com">
+                      </div>
+
+                      <div class="row-md-6">
+                        <label for="inputPassword4" class="form-label fs-5">Contraseña<span>*</span></label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese su contraseña">
+                      </div>
+
+                      <div class="form-check mt-1 fs-6">
+                        <input class="form-check-input me-1" type="checkbox" id="gridCheck1" checked>
+                        <label class="form-check-label pt-1" for="gridCheck1">Mantener la sesión abierta.</label>
+                      </div>
+
+                      <div class="col-12 d-grid">
+                        <button type="submit" class="btn btn-modal text-uppercase fs-5 col-12">Ingresar</button>
+                        <a href="#" class="mt-2 linkCorregido fs-6">¿Olvidaste tu contraseña?</a>
+                      </div>
+                    </form>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0" />
+
+                  <div class="modal-footer d-block border-top-0">
+                    <p class="text-center">¿No tienes cuenta?
+                      <a href="#" class="linkCorregido">Registrate aquí</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carrito -->
+
+            <a href="cart.html" class="list-group-item me-3">
+              <i class="fa-solid fa-cart-shopping hvr-pop"></i>
+              <span id="carrito-numero">4</span>
+            </a>
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar secundario -->
+
+      <div class="container-fluid p-3 colorSecundario">
+        <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+          <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <a class="hvr-underline-from-left p-2" href="#">Categorías</a>
+          </li>
+
+          <!-- Menú lateral desplegable -->
+
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title text-uppercase" id="offcanvasTopLabel">Todas las categorías</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="categorias fs-4 p-0">
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Blues</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Clásico</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Electrónica</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Folclore</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Heavy</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Hip Hop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Infantiles</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Jazz</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">K Pop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Latinos</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Reggae</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock & Pop Internacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock Nacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Tango</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Varios</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <li><a class="hvr-underline-from-left p-2" href="#">Historial</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vistos recientemente</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Mensajes</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vender</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container-fluid encabezadoCarrito">
+          <div class="d-flex justify-content-between align-items-center p-3">
+            <h3 class="text-uppercase">Tu Carrito (4 Productos)</h2>
+            <a class="linkCorregido text-uppercase" href="../index.html"><i class="fa-solid fa-chevron-left me-2"></i>Continuar Comprando</a>
+          </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-around carrito">
+          <div class="productosEnCarrito my-4">
+            <div class="producto d-flex justify-content-evenly px-2 mt-3">
+              <div class="imagenProducto">
+                <img src="../img/products/Ahi-vamos.webp" class="card-img-top" alt="...">
+                <p class="text-center">En stock</p>
+              </div>
+              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
+                <h4 class="">Ahí Vamos</h4>
+                <h5 class="precio">$999.99</h5>
+                <p class="mb-1"><span>Artista:</span> Gustavo Cerati</p>
+                <p class="mb-1"><span>Año de Lanzamiento:</span> 2006</p>
+                <p class="mb-1"><span>Formato:</span> CD</p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
+                  <a href="#" class="linkCorregido px-2">Eliminar</a>
+                  <a href="#" class="linkCorregido px-2">Guardar</a>
+                  <a href="#" class="linkCorregido px-2">Comparar con artículos similares</a>
+                  <a href="#" class="linkCorregido px-2">Compartir</a>
+                </div>
+                
+                <p class="ms-3 my-2">10 disponibles</p>
+              </div>
+            </div>
+
+            <div class="producto d-flex justify-content-evenly px-2 mt-3">
+              <div class="imagenProducto">
+                <img src="../img/products/internac-oasis.webp" class="card-img-top" alt="...">
+                <p class="text-center">En stock</p>
+              </div>
+              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
+                <h4 class="m-0">(What's the story) Morning Glory ?</h4>
+                <h5 class="precio">$999.99</h5>
+                <p class="mb-1"><span>Artista:</span> Oasis</p>
+                <p class="mb-1"><span>Año de Lanzamiento:</span> 1995</p>
+                <p class="mb-1"><span>Formato:</span> CD</p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
+                  <a href="#" class="linkCorregido px-2">Eliminar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
+                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
+                </div>
+                
+                <p class="ms-3 my-2">10 disponibles</p>
+              </div>
+            </div>
+
+            <div class="producto d-flex justify-content-evenly px-2 mt-3">
+              <div class="imagenProducto">
+                <img src="../img/products/dvd-gardelitos.webp" class="card-img-top" alt="...">
+                <p class="text-center">En stock</p>
+              </div>
+              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
+                <h4 class="m-0">Gardelitografía</h4>
+                <h5 class="precio">$999.99</h5>
+                <p class="mb-1"><span>Artista:</span> Los Gardelitos</p>
+                <p class="mb-1"><span>Año de Lanzamiento:</span> 2006</p>
+                <p class="mb-1"><span>Formato:</span> BoxSet</p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
+                  <a href="#" class="linkCorregido px-2">Eliminar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
+                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
+                </div>
+                
+                <p class="ms-3 my-2">10 disponibles</p>
+              </div>
+            </div>
+
+            <div class="producto d-flex justify-content-evenly px-2 mt-3">
+              <div class="imagenProducto">
+                <img src="../img/products/vinilo-harry.webp" class="card-img-top" alt="...">
+                <p class="text-center">En stock</p>
+              </div>
+              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
+                <h4 class="m-0">Harry's House</h4>
+                <h5 class="precio">$999.99</h5>
+                <p class="mb-1"><span>Artista:</span> Harry Styles</p>
+                <p class="mb-1"><span>Año de Lanzamiento:</span> 2022</p>
+                <p class="mb-1"><span>Formato:</span> Vinilo</p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
+                  <a href="#" class="linkCorregido px-2">Eliminar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
+                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
+                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
+                </div>
+                
+                <p class="ms-3 my-2">10 disponibles</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resumen mt-4">
+            <div class="detalleResumen d-flex flex-column p-3">
+              <h4 class="text-uppercase">Resumen del pedido</h4>
+              <div class="d-flex justify-content-between">
+                <p>4 Productos</p>
+                <p><span>$999.99</span></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Envío</p>
+                <p class="verde">Gratis</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Total</p>
+                <p><span>$999.99</span></p>
+              </div>
+              <input type="text" placeholder="Ingrese su código de Promoción">
+              <h5 class="text-uppercase mt-2">Medios de Pago Aceptados</h5>
+              <div class="d-flex justify-content-start mb-4">
+                <img src="../img/icons/amex.svg" alt="">
+                <img src="../img/icons/hsbc.svg" alt="">
+                <img src="../img/icons/mastercard.svg" alt="">
+                <img src="../img/icons/santander.svg" alt="">
+                <img src="../img/icons/visa.svg" alt="">
+              </div>
+              <button class="btn btn-danger text-uppercase">Ir a pagar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="encabezado">Nuestras Recomendaciones</h2>
+        <div class="d-flex justify-content-center">
+          <div class="contenedor recomendados d-flex justify-content-evenly">
+            <div class="card">
+              <img src="../img/products/cd-am-live.webp" class="imagenCard" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$999.99</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
+                <p class="card-text">Arctic Monkeys - Live At The Royal Albert Hall (2020) Cd Nuevo</p>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+              </div>
+            </div>
+    
+            <div class="card">
+              <img src="../img/products/cd-eddie-vader.webp" class="imagenCard" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$999.99</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
+                <p class="card-text">Eddie Vedder - Ukulele Songs (2011) Cd Cerrado Original</p>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="../img/products/cd-david-bowie.webp" class="imagenCard" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$999.99</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
+                <p class="card-text">David Bowie - Brilliant Adventure Ep (2021) Cd Nuevo Importado Rsd</p>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="../img/products/cd-megadeth.webp" class="imagenCard" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$999.99</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
+                <p class="card-text">Megadeth - Warheads On Foreheads (3 Cd's) Nuevo Original</p>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="../img/products/cd-qotsa.webp" class="imagenCard" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$999.99</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
+                <p class="card-text">Queens Of The Stone Age - Villains (2017) Cd Nuevo Edición Especial</p>
+                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+              </div>
+            </div>
+            </div>
+        </div>
+      </section>
+        
+      
+      
+      
+      
+    </main>
+
+    <footer class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg colorSecundario">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex justify-content-between align-items-center gap-5">
+              <a class="inicio" href="index.html">
+                <img class="logo" src="../img/logo-oscuro.png" alt="Logo">
+              </a>
+
+              <p class="m-0">Buscanos en nuestras redes:</p>
+              <ul class="d-flex m-0 p-0 redes">
+                <li class="me-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center contactoIndex">
+              <h5 class="mb-3">Contacto</h5>
+              <p class="m-0">9 de Julio 112</p>
+              <p class="m-0">Concepción, Tucumán (C.P. 4146)</p>
+              <a href="contacto.html">
+                <i class="fa-regular fa-comments me-2"></i>
+              Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+            <li><a class="hvr-underline-from-left p-2" href="#">Servicios</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Seguridad</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Defensa del<br>Consumidor</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Terminos y<br>Condiciones</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Privacidad</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="nosotros.html">¿Quiénes somos?</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center justify-content-evenly qr">
+            <p class="m-0">&copy; CopyRight - Music Store S.A. 2023</p>
+            <img src="../img/data-fiscal.jpeg" alt="QR Data Fiscal" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

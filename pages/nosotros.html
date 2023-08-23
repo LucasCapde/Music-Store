@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Proyecto Integrador - Etapa 1 | Nosotros</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+          <!-- Logo y dirección -->
+
+          <div class="d-flex justify-content-around align-items-center">
+            <a class="inicio" href="../index.html">
+              <img class="logo" src="../img/logo-oscuro.png" alt="Logo">
+            </a>
+            <div class="ms-2">
+              <p class="m-0 text-center blanco" href="#">Enviar a Lucas<br></p>
+              <div class="d-flex align-items-center justify-content-center envio">
+                <i class="fa-solid fa-location-dot mx-1"></i>
+                <address class="m-0">San Martín 1234</address>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra de búsqueda -->
+          
+          <form class="d-flex w-50" role="search">
+            <input class="form-control me-auto" type="search" placeholder="Buscar artículos..." aria-label="Search">
+            <button type="button" class="btn btn-light" id="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          
+          <div class="d-flex w-25 justify-content-center align-items-center">
+            
+            <!-- Menú desplageable de idiomas -->
+            
+            <div class="dropdown">
+              <button class="btn dropdown-toggle me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../img/icons/españa.svg" width="20px" height="auto" alt="Bandera de España">ES
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="../img/icons/uk.svg" width="20px" height="auto" alt="Bandera de UK">EN
+                  </a>
+                </li>
+                
+                <li><hr class="dropdown-divider mx-1"></li>
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="../img/icons/portugal.svg" width="20px" height="auto" alt="Bandera de UK">PO
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Descarga la app e ingreso/crear usuario -->
+            
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2">Descarga la app</a>
+            <button type="button" class="btn me-3 p-0" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-regular fa-user hvr-pop"></i>
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header d-flex flex-column border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title fs-3 text-uppercase mb-3" id="exampleModalLabel">
+                      Disfrutá de los beneficios de Music Store al iniciar sesión
+                    </h2>
+                    <p class="fs-6">Conseguí cupones de descuento, productos exclusivos y promociones especiales.</p>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0">
+
+                  <div class="modal-body">
+                    <h3 class="fs-4 text-uppercase">Iniciar sesión</h3>
+                    <form class="row g-3">
+                      <div class="row-md-6">
+                        <label for="inputEmail4" class="form-label fs-5">Email<span>*</span></label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="usuario@ejemplo.com">
+                      </div>
+
+                      <div class="row-md-6">
+                        <label for="inputPassword4" class="form-label fs-5">Contraseña<span>*</span></label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese su contraseña">
+                      </div>
+
+                      <div class="form-check mt-1 fs-6">
+                        <input class="form-check-input me-1" type="checkbox" id="gridCheck1" checked>
+                        <label class="form-check-label pt-1" for="gridCheck1">Mantener la sesión abierta.</label>
+                      </div>
+
+                      <div class="col-12 d-grid">
+                        <button type="submit" class="btn btn-modal text-uppercase fs-5 col-12">Ingresar</button>
+                        <a href="#" class="mt-2 linkCorregido fs-6">¿Olvidaste tu contraseña?</a>
+                      </div>
+                    </form>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0" />
+
+                  <div class="modal-footer d-block border-top-0">
+                    <p class="text-center">¿No tienes cuenta?
+                      <a href="#" class="linkCorregido">Registrate aquí</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carrito -->
+
+            <a href="cart.html" class="list-group-item me-3">
+              <i class="fa-solid fa-cart-shopping hvr-pop"></i>
+              <span id="carrito-numero">4</span>
+            </a>
+
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar secundario -->
+
+      <div class="container-fluid p-3 colorSecundario">
+        <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+          <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <a class="hvr-underline-from-left p-2" href="#">Categorías</a>
+          </li>
+
+          <!-- Menú lateral desplegable -->
+
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title text-uppercase" id="offcanvasTopLabel">Todas las categorías</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="categorias fs-4 p-0">
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Blues</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Clásico</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Electrónica</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Folclore</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Heavy</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Hip Hop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Infantiles</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Jazz</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">K Pop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Latinos</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Reggae</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock & Pop Internacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock Nacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Tango</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Varios</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <li><a class="hvr-underline-from-left p-2" href="#">Historial</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vistos recientemente</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Mensajes</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vender</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="col-12">
+        <h2 class="text-center text-uppercase">Disquería Music Store</h2>
+      </section>
+
+      <section class="quienesSomos">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="imagenNosotros">
+            <img src="../img/products/nosotros1.jpg" alt="">
+          </div>
+
+          <div class="nosotros w-50">
+            <h3>¿Quiénes somos?</h3>
+            <p>En Music Store nos apasiona la música tanto como a vos. Somos más que una tienda, somos un destino para los amantes de la música. Nuestra plataforma fue creada con la misión de brindarte acceso instantáneo a un mundo lleno de melodías, ritmos y emociones.
+
+            <p>¿Qué nos hace especiales? Nuestra vasta colección abarca todos los géneros, desde clásicos atemporales hasta los últimos éxitos. Ya sea que estés buscando las canciones que marcaron tu infancia o las últimas creaciones de artistas emergentes, lo tenemos cubierto.</p>
+              
+            <p>Nuestra tienda online hace que explorar y descubrir nueva música sea una experiencia emocionante. Queremos que encuentres la banda sonora perfecta para cada momento de tu vida.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quienesSomos">
+        <div class="container-fluid d-flex justify-content-between">
+          <div class="nosotros w-50">
+            <h3>Nuestra Misión</h3>
+            <p>Además de nuestra increíble selección musical, también nos enorgullece brindar un servicio de alta calidad. Nuestro equipo de atención al cliente está disponible para ayudarte en cada paso del camino. Si tienes preguntas sobre cómo encontrar esa canción difícil de encontrar o necesitas asistencia técnica, estamos aquí para ayudarte.</p>
+              
+            <p>En Music Store creemos en apoyar a la comunidad musical en su totalidad. Trabajamos en estrecha colaboración con artistas y sellos discográficos para asegurarnos de que su música llegue a tus oídos de la manera más auténtica posible. Al elegirnos, estás contribuyendo al crecimiento y la diversidad de la escena musical.</p>
+            <p>Únete a nosotros mientras exploramos el mundo de la música juntos. Ya seas un melómano experimentado o estés dando tus primeros pasos en el mundo de los acordes y las notas, estamos emocionados de ser parte de tu viaje musical.</p>
+              
+          </div>
+            
+          <img class="imgNosotros" src="../img/products/nosotros2.jpg" alt="">
+        </div>
+      </section>
+
+      
+    </main>
+
+    <footer class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg colorSecundario">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex justify-content-between align-items-center gap-5">
+              <a class="inicio" href="index.html">
+                <img class="logo" src="../img/logo-oscuro.png" alt="Logo">
+              </a>
+
+              <p class="m-0">Buscanos en nuestras redes:</p>
+              <ul class="d-flex m-0 p-0 redes">
+                <li class="me-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center contactoIndex">
+              <h5 class="mb-3">Contacto</h5>
+              <p class="m-0">9 de Julio 112</p>
+              <p class="m-0">Concepción, Tucumán (C.P. 4146)</p>
+              <a href="contacto.html">
+                <i class="fa-regular fa-comments me-2"></i>
+              Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+            <li><a class="hvr-underline-from-left p-2" href="#">Servicios</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Seguridad</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Defensa del<br>Consumidor</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Terminos y<br>Condiciones</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Privacidad</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="nosotros.html">¿Quiénes somos?</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center justify-content-evenly qr">
+            <p class="m-0">&copy; CopyRight - Music Store S.A. 2023</p>
+            <img src="../img/data-fiscal.jpeg" alt="QR Data Fiscal" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
