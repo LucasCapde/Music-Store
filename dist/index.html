@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c7393ce70b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+
+    
+    <title>Proyecto Integrador - Etapa 1 | Inicio</title>
+    <script type="module" crossorigin src="/assets/carrito-f9c534c5.js"></script>
+    <link rel="stylesheet" href="/assets/cart-89a942b3.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo y dirección -->
+
+          <div class="d-flex justify-content-around align-items-center">
+            <a class="inicio" href="index.html">
+              <img class="logo" src="/assets/logo-oscuro-2c49036c.png" alt="Logo" />
+            </a>
+            <div class="ms-2">
+              <p class="m-0 text-center" href="#">Enviar a Lucas<br /></p>
+              <div
+                class="d-flex align-items-center justify-content-center envio"
+              >
+                <i class="fa-solid fa-location-dot mx-1"></i>
+                <address class="m-0">San Martín 1234</address>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra de búsqueda -->
+
+          <form class="d-flex w-50" role="search">
+            <input
+              class="form-control me-auto"
+              type="search"
+              placeholder="Buscar artículos..."
+              aria-label="Search"
+            />
+            <button type="button" class="btn btn-light" id="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <div class="d-flex w-25 justify-content-center align-items-center">
+            <!-- Menú desplageable de idiomas -->
+
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle me-3"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/assets/españa-5545d8dd.svg"
+                  width="20px"
+                  height="auto"
+                  alt="Bandera de España"
+                />ES
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img
+                      src="/assets/uk-b93bb150.svg"
+                      width="20px"
+                      height="auto"
+                      alt="Bandera de UK"
+                    />EN
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider mx-1" /></li>
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img
+                      src="/assets/portugal-c63cbe70.svg"
+                      width="20px"
+                      height="auto"
+                      alt="Bandera de UK"
+                    />PO
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Descarga la app -->
+            
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2"
+            >Descarga la app</a
+            >
+            
+            <!-- Botón para modo oscuro -->
+            
+            <button class="switch me-3 active" id="switch">
+              <span><i class="fa-solid fa-sun"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </button>
+            
+            <!-- ingresar/crear usuario -->
+
+            <button
+              type="button"
+              class="btn me-3 p-0 icono-blanco"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <i class="fa-regular fa-user fa-xl hvr-pop"></i>
+            </button>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header d-flex flex-column border-bottom-0">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                    <h2
+                      class="modal-title fs-3 text-uppercase mb-3"
+                      id="exampleModalLabel"
+                    >
+                      Disfrutá de los beneficios de Music Store al iniciar
+                      sesión
+                    </h2>
+                    <p class="fs-6">
+                      Conseguí cupones de descuento, productos exclusivos y
+                      promociones especiales.
+                    </p>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0" />
+
+                  <div class="modal-body">
+                    <h3 class="fs-4 text-uppercase">Iniciar sesión</h3>
+                    <form class="row g-3">
+                      <div class="row-md-6">
+                        <label for="inputEmail4" class="form-label fs-5"
+                          >Email<span>*</span></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                          placeholder="usuario@ejemplo.com"
+                        />
+                      </div>
+
+                      <div class="row-md-6">
+                        <label for="inputPassword4" class="form-label fs-5"
+                          >Contraseña<span>*</span></label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                          placeholder="Ingrese su contraseña"
+                        />
+                      </div>
+
+                      <div class="form-check mt-1 fs-6">
+                        <input
+                          class="form-check-input me-1"
+                          type="checkbox"
+                          id="gridCheck1"
+                          checked
+                        />
+                        <label class="form-check-label pt-1" for="gridCheck1"
+                          >Mantener la sesión abierta.</label
+                        >
+                      </div>
+
+                      <div class="col-12 d-grid">
+                        <button
+                          type="submit"
+                          class="btn btn-modal text-uppercase fs-5 col-12"
+                        >
+                          Ingresar
+                        </button>
+                        <a href="#" class="mt-2 linkCorregido fs-6"
+                          >¿Olvidaste tu contraseña?</a
+                        >
+                      </div>
+                    </form>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0" />
+
+                  <div class="modal-footer d-block border-top-0">
+                    <p class="text-center">
+                      ¿No tienes cuenta?
+                      <a href="#" class="linkCorregido">Registrate aquí</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carrito -->
+
+            <div class="d-flex">
+              <div class="dropdown dropstart">
+                <a
+                  class="nav-link icono-blanco"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-cart-shopping fa-xl hvr-pop"></i>
+                  <span id="carrito-contador"></span>
+                </a>
+                <ul id="carrito" class="dropdown-menu mx-2">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+
+                  <div
+                    class="d-grid gap-2 d-md-block justify-content-md-center ms-1"
+                  >
+                    <button id="vaciar-carrito" class="btn btn-primary mx-1">
+                      Vaciar carrito
+                    </button>
+                    <button id="procesar-pedido" class="btn btn-success">
+                      Procesar compra
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar secundario -->
+
+      <div class="container-fluid p-3 colorSecundario">
+        <ul
+          class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0"
+        >
+          <li
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          >
+            <a class="hvr-underline-from-left p-2" href="#">Categorías</a>
+          </li>
+
+          <!-- Menú lateral desplegable -->
+
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasTop"
+            aria-labelledby="offcanvasTopLabel"
+          >
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title text-uppercase" id="offcanvasTopLabel">
+                Todas las categorías
+              </h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="categorias fs-4 p-0">
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Blues</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Clásico</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Electrónica</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Folclore</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Heavy</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Hip Hop</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Infantiles</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Jazz</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">K Pop</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Latinos</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Reggae</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Rock & Pop Internacional</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Rock Nacional</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Tango</a>
+                </li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right">
+                  <a href="#">Varios</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <li><a class="hvr-underline-from-left p-2" href="#">Historial</a></li>
+          <li>
+            <a class="hvr-underline-from-left p-2" href="#"
+              >Vistos recientemente</a
+            >
+          </li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Mensajes</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vender</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Carrousel superior -->
+
+      <section>
+        <div
+          id="miCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#miCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#miCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#miCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <div class="carousel-inner miCarousel">
+            <div class="carousel-item active">
+              <div
+                class="imagenSlide"
+                style="
+                  background-image: url(/assets/fondo-mas-escuchados-bc80a779.webp);
+                "
+              ></div>
+              <div
+                class="carousel-caption d-flex flex-column align-items-start"
+              >
+                <h4>Más escuchados</h4>
+                <p>
+                  Encontrá los artistas más escuchados en Argentina y el mundo.
+                </p>
+                <a href="#" class="btn btn-primary w-25 px-0">Conocé más</a>
+                <!-- todo -->
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="imagenSlide"
+                style="background-image: url(/assets/fondo-novedades-52a898c5.webp)"
+              ></div>
+              <div class="carousel-caption d-flex flex-column text-start">
+                <h4>Novedades</h4>
+                <p>
+                  Descubrí los últimos lanzamientos de tus artistas favoritos.
+                </p>
+                <a href="#" class="btn btn-primary w-25 px-0">Conocé más</a>
+                <!-- todo -->
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="imagenSlide"
+                style="background-image: url(/assets/fondo-ofertas-d605a0e8.webp)"
+              ></div>
+              <div class="carousel-caption d-flex flex-column text-start">
+                <h4>Ofertas imperdibles</h4>
+                <p>
+                  Solo por esta semana conseguí descuentos de hasta el 50% con
+                  tarjetas de débito y crédito.
+                </p>
+                <a href="#" class="btn btn-primary w-25 px-0">Conocé más</a>
+                <!-- todo -->
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#miCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#miCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="lista-productos">
+
+      <!-- Tarjetas Categorías -->
+
+        <section>
+          <h2 class="encabezado animate__animated animate__fadeInDown animate__slow">Elegí los mejores géneros</h2>
+          <!-- Categoría 1 (Rock Nacional) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">Rock Nacional</h3>
+              <a href="#">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/Ahi-vamos-767748b3.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Gustavo Cerati - Ahí Vamos
+                    </span>
+                    (<span class="anio-producto">2006</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="1"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/Otro-dia-en-el-planeta-tierra-6ba5e3fe.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Intoxicados - Otro día en el Planeta Tierra
+                    </span>
+                    (<span class="anio-producto">2005</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="2"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              
+              <div class="card">
+                <img
+                src="/assets/oktubre-7c28c6f3.webp"
+                class="imagenCard"
+                alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Patricio Rey y sus Redonditos de Ricota - Oktubre
+                    </span>
+                    (<span class="anio-producto">1986</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="3"
+                  >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+              
+              <div class="card">
+                <img
+                src="/assets/La-era-de-la-boludez-2a6da3fe.webp"
+                class="imagenCard"
+                alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Divididos - La era de la boludez
+                    </span>
+                    (<span class="anio-producto">1993</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="4"
+                  >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+              
+              <div class="card">
+                <img
+                  src="/assets/Narigon-del-siglo-540425d2.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Divididos - Narigon del Siglo
+                    </span>
+                    (<span class="anio-producto">2000</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="5"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría 2 (Rock & pop internacional) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">Rock & Pop Internacional</h3>
+              <a href="#" class="linkTitulo">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/internac-blur-d4833cbe.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Blur - The Magic Whip
+                    </span>
+                    (<span class="anio-producto">2015</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="6"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/internac-oasis-25b88afd.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Oasis - (What's the Story) Morning Glory ?
+                    </span>
+                    (<span class="anio-producto">1995</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="7"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/internac-muse-94063e8b.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Muse - Origin of Symmetry
+                    </span>
+                    (<span class="anio-producto">2001</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="8"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/internac-taylor-5ad54042.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Taylor Swift - Lover Version Deluxe
+                    </span>
+                    (<span class="anio-producto">2019</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="9"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/internac-the-smiths-4dd44828.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      The Smiths - Meat is Murder
+                    </span>
+                    (<span class="anio-producto">1985</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="10"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría 3 (Latinos) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">Latinos</h3>
+              <a href="#" class="linkTitulo">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/latino-camila-cb907fbf.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Camila - Dejarte de Amar
+                    </span>
+                    (<span class="anio-producto">2010</span>)
+                    <span class="formato-producto">Cd Nuevo Acústico Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="11"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/latino-luis-miguel-be8a677b.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Luis Miguel - Luis Miguel LM
+                    </span>
+                    (<span class="anio-producto">2010</span>)
+                    <span class="formato-producto">Cd Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="12"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/latino-maluma-60ca8ca7.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Maluma - Pretty Boy, Dirty Boy
+                    </span>
+                    (<span class="anio-producto">2015</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="13"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/latino-mana-0154580d.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Maná - ¿Dónde jugarán los niños?
+                    </span>
+                    (<span class="anio-producto">1992</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="14"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/latino-pablo-alboran-2e86c838.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Pablo Alborán - Tanto
+                    </span>
+                    (<span class="anio-producto">2012</span>)
+                    <span class="formato-producto">Cd Nuevo Versión Ambiental</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="15"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tarjetas Colecciones -->
+
+        <section>
+          <h2 class="encabezado animate__animated animate__fadeInDown animate__slow">Conseguí tu formato preferido</h2>
+          <!-- Colección 1 (CDs) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">CDs</h3>
+              <a href="#" class="linkTitulo">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/cd-am-live-31c711ba.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Arctic Monkeys - Live At The Royal Albert Hall
+                    </span>
+                    (<span class="anio-producto">2020</span>)
+                    <span class="formato-producto">Cd Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="16"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/cd-eddie-vader-e063f473.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Eddie Vedder - Ukulele Songs
+                    </span>
+                    (<span class="anio-producto">2011</span>)
+                    <span class="formato-producto">Cd Cerrado Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="17"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/cd-david-bowie-c416ae2a.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      David Bowie - Brilliant Adventure Ep
+                    </span>
+                    (<span class="anio-producto">2021</span>)
+                    <span class="formato-producto">Cd Nuevo Importado Rsd</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="18"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/cd-megadeth-951309a9.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Megadeth - Warheads On Foreheads
+                    </span>
+                    (<span class="anio-producto">2006</span>)
+                    <span class="formato-producto">(3 Cd's) Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="19"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/cd-qotsa-c66e99b4.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Queens Of The Stone Age - Villains
+                    </span>
+                    (<span class="anio-producto">2017</span>)
+                    <span class="formato-producto">Cd Nuevo Edición Especial</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="20"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colección 2 (DVDs) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">DVDs</h3>
+              <a href="#" class="linkTitulo">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/dvd-autenticos-a6dbce68.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Los Autenticos Decadentes - Fiesta nacional (MTV Unplugged)
+                    </span>
+                    (<span class="anio-producto">2018</span>)
+                    <span class="formato-producto">DVD</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="21"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/dvd-calamaro-0bfd2132.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Andrés Calamaro - Pura Sangre
+                    </span>
+                    (<span class="anio-producto">2014</span>)
+                    <span class="formato-producto">DVD Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="22"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/dvd-gardelitos-f7cf792b.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Los Gardelitos - Gardelitografía
+                    </span>
+                    (<span class="anio-producto">2016</span>)
+                    <span class="formato-producto">5 CDs + DVD Box Set</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="23"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/dvd-miranda-4965361f.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Miranda - Miranda! En Vivo
+                    </span>
+                    (<span class="anio-producto">2015</span>)
+                    <span class="formato-producto">DVD Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="24"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/dvd-pier-d0d547ea.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Pier - Flores de Rock & Roll
+                    </span>
+                    (<span class="anio-producto">2020</span>)
+                    <span class="formato-producto">DVD Nuevo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="25"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          <!-- Colección 3 (Vinilos) -->
+          <div class="categoria m-3 p-3">
+            <div class="titulo d-flex align-items-end">
+              <h3 class="m-0 me-2">Vinilos</h3>
+              <a href="#" class="linkTitulo">Ver más</a>
+            </div>
+
+            <div class="contenedor d-flex justify-content-evenly">
+              <div class="card">
+                <img
+                  src="/assets/vinilo-radiohead-1375744a.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">5490</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2064
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Radiohead - Ok Computer
+                    </span>
+                    (<span class="anio-producto">1997</span>)
+                    <span class="formato-producto">Vinilo Doble 2 Lp Nuevo</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="26"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/vinilo-u2-5ac75311.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">9784</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $3680
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      U2 - Two Hearts / Sunday Bloody Sunday
+                    </span>
+                    (<span class="anio-producto">2023</span>)
+                    <span class="formato-producto">Vinilo Maxi Blanco Rsd</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="27"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/vinilo-harry-eb2224e6.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">7200</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $2706
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Harry Styles - Harry's House
+                    </span>
+                    (<span class="anio-producto">2022</span>)
+                    <span class="formato-producto">Lp Vinilo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="28"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/vinilo-mac-de-marco-d84e8b2e.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">2650</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $980
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Mac DeMarco - 2
+                    </span>
+                    (<span class="anio-producto">2012</span>)
+                    <span class="formato-producto">Lp Vinilo Original Edición Especial</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="29"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="/assets/vinilo-placebo-981a5be7.webp"
+                  class="imagenCard"
+                  alt="Portada álbum"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">$ <span class="precio-producto">4999</span></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    6 cuotas de $687
+                  </h6>
+                  <p class="card-text">
+                    <span class="titulo-producto">
+                      Placebo - Without You I'm Nothing
+                    </span>
+                    (<span class="anio-producto">1998</span>)
+                    <span class="formato-producto">Vinilo Original</span>
+                  </p>
+                  <a href="#" class="btn btn-primary agregar-carrito" data-id="30"
+                    >Agregar al Carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <footer class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg colorSecundario">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <div
+              class="d-flex justify-content-between align-items-center gap-5"
+            >
+              <a class="inicio" href="index.html">
+                <img class="logo" src="/assets/logo-oscuro-2c49036c.png" alt="Logo" />
+              </a>
+
+              <p class="m-0">Buscanos en nuestras redes:</p>
+              <ul class="d-flex m-0 p-0 redes">
+                <li class="me-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="d-flex flex-column justify-content-center contactoIndex"
+            >
+              <h5 class="mb-3">Contacto</h5>
+              <p class="m-0">9 de Julio 112</p>
+              <p class="m-0">Concepción, Tucumán (C.P. 4146)</p>
+              <a href="pages/contacto.html">
+                <i class="fa-regular fa-comments me-2"></i>
+                Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <ul
+            class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0"
+          >
+            <li>
+              <a class="hvr-underline-from-left p-2" href="#">Servicios</a>
+            </li>
+            <li>
+              <a class="hvr-underline-from-left p-2" href="#">Seguridad</a>
+            </li>
+            <li class="text-center">
+              <a class="hvr-underline-from-left p-2" href="#"
+                >Defensa del<br />Consumidor</a
+              >
+            </li>
+            <li class="text-center">
+              <a class="hvr-underline-from-left p-2" href="#"
+                >Terminos y<br />Condiciones</a
+              >
+            </li>
+            <li>
+              <a class="hvr-underline-from-left p-2" href="#">Privacidad</a>
+            </li>
+            <li>
+              <a class="hvr-underline-from-left p-2" href="pages/nosotros.html"
+                >¿Quiénes somos?</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center justify-content-evenly qr">
+            <p class="m-0">&copy; CopyRight - Music Store S.A. 2023</p>
+            <img src="/assets/data-fiscal-5828cebd.jpeg" alt="QR Data Fiscal" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>

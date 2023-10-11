@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <title>Proyecto Integrador - Etapa 1 | Contacto</title>
+    <script type="module" crossorigin src="/assets/carrito-f9c534c5.js"></script>
+    <link rel="stylesheet" href="/assets/cart-89a942b3.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+          <!-- Logo y dirección -->
+
+          <div class="d-flex justify-content-around align-items-center">
+            <a class="inicio" href="../index.html">
+              <img class="logo" src="/assets/logo-oscuro-2c49036c.png" alt="Logo">
+            </a>
+            <div class="ms-2">
+              <p class="m-0 text-center blanco" href="#">Enviar a Lucas<br></p>
+              <div class="d-flex align-items-center justify-content-center envio">
+                <i class="fa-solid fa-location-dot mx-1"></i>
+                <address class="m-0">San Martín 1234</address>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barra de búsqueda -->
+          
+          <form class="d-flex w-50" role="search">
+            <input class="form-control me-auto" type="search" placeholder="Buscar artículos..." aria-label="Search">
+            <button type="button" class="btn btn-light" id="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          
+          <div class="d-flex w-25 justify-content-center align-items-center">
+            
+            <!-- Menú desplageable de idiomas -->
+            
+            <div class="dropdown">
+              <button class="btn dropdown-toggle me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/assets/españa-5545d8dd.svg" width="20px" height="auto" alt="Bandera de España">ES
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="/assets/uk-b93bb150.svg" width="20px" height="auto" alt="Bandera de UK">EN
+                  </a>
+                </li>
+                
+                <li><hr class="dropdown-divider mx-1"></li>
+                <li>
+                  <a class="dropdown-item px-2" href="#">
+                    <img src="/assets/portugal-c63cbe70.svg" width="20px" height="auto" alt="Bandera de UK">PO
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+
+
+            <!-- Descarga la app -->
+            
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2"
+            >Descarga la app</a
+            >
+            
+            <!-- Botón para modo oscuro -->
+            
+            <button class="switch me-3 active" id="switch">
+              <span><i class="fa-solid fa-sun"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </button>
+            
+            <!-- ingresar/crear usuario -->
+            
+            <button type="button" class="btn me-3 p-0 icono-blanco" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-regular fa-user fa-xl hvr-pop"></i>
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header d-flex flex-column border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="modal-title fs-3 text-uppercase mb-3" id="exampleModalLabel">
+                      Disfrutá de los beneficios de Music Store al iniciar sesión
+                    </h2>
+                    <p class="fs-6">Conseguí cupones de descuento, productos exclusivos y promociones especiales.</p>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0">
+
+                  <div class="modal-body">
+                    <h3 class="fs-4 text-uppercase">Iniciar sesión</h3>
+                    <form class="row g-3">
+                      <div class="row-md-6">
+                        <label for="inputEmail4" class="form-label fs-5">Email<span>*</span></label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="usuario@ejemplo.com">
+                      </div>
+
+                      <div class="row-md-6">
+                        <label for="inputPassword4" class="form-label fs-5">Contraseña<span>*</span></label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese su contraseña">
+                      </div>
+
+                      <div class="form-check mt-1 fs-6">
+                        <input class="form-check-input me-1" type="checkbox" id="gridCheck1" checked>
+                        <label class="form-check-label pt-1" for="gridCheck1">Mantener la sesión abierta.</label>
+                      </div>
+
+                      <div class="col-12 d-grid">
+                        <button type="submit" class="btn btn-modal text-uppercase fs-5 col-12">Ingresar</button>
+                        <a href="#" class="mt-2 linkCorregido fs-6">¿Olvidaste tu contraseña?</a>
+                      </div>
+                    </form>
+                  </div>
+
+                  <hr class="hr-modal mx-3 my-0" />
+
+                  <div class="modal-footer d-block border-top-0">
+                    <p class="text-center">¿No tienes cuenta?
+                      <a href="#" class="linkCorregido">Registrate aquí</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carrito -->
+            
+            <div class="d-flex">
+              <div class="dropdown dropstart">
+                <a
+                  class="nav-link icono-blanco"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-cart-shopping fa-xl hvr-pop"></i>
+                  <span id="carrito-numero">4</span>
+                  <!-- TODO: Cambiar con JS -->
+                </a>
+                <ul id="carrito" class="dropdown-menu mx-2">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+
+                  <div
+                    class="d-grid gap-2 d-md-block justify-content-md-center ms-1"
+                  >
+                    <button id="vaciar-carrito" class="btn btn-primary mx-1">
+                      Vaciar carrito
+                    </button>
+                    <button id="procesar-pedido" class="btn btn-success">
+                      Procesar compra
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar secundario -->
+
+      <div class="container-fluid p-3 colorSecundario">
+        <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+          <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <a class="hvr-underline-from-left p-2" href="#">Categorías</a>
+          </li>
+
+          <!-- Menú lateral desplegable -->
+
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title text-uppercase" id="offcanvasTopLabel">Todas las categorías</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="categorias fs-4 p-0">
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Blues</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Clásico</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Electrónica</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Folclore</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Heavy</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Hip Hop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Infantiles</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Jazz</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">K Pop</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Latinos</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Reggae</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock & Pop Internacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Rock Nacional</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Tango</a></li>
+                <li class="p-2 rounded-2 hvr-sweep-to-right"><a href="#">Varios</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <li><a class="hvr-underline-from-left p-2" href="#">Historial</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vistos recientemente</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Mensajes</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Vender</a></li>
+          <li><a class="hvr-underline-from-left p-2" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      
+      <section class="contacto">
+        <div class="col-12">
+          <h2 class="text-center text-uppercase">Comunicate con nosotros</h2>
+        </div>
+
+        <div class="col-12 d-flex fila">
+          <div class="item d-flex flex-column align-items-center justify-content-center w-50">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Soporte Whatsapp</h3>
+            <p class="text-center">Envía tu consulta a nuestro Centro de Atención. Lunes a Viernes de 09:00 hs a 18:00 hs.</p>
+            <p><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>3865 123456</p>
+          </div>
+
+          <div class="item d-flex flex-column align-items-center justify-content-center w-50">
+            <i class="fa-solid fa-location-dot" id="fa-location-dot"></i>
+            <h3>Visitanos</h3>
+            <p class="text-center">Podés venir a nuestro local a buscar tus discos favoritos. Lunes a Viernes de 09:00 a 18:00 hs.</p>
+            <p>9 de Julio 112 - Concepción, Tucumán</p>
+          </div>
+            
+          <div class="item d-flex flex-column align-items-center justify-content-center w-50">
+            <i class="fa-solid fa-at"></i>
+            <h3>Email</h3>
+            <p class="text-center">Podes mandarnos todas tus consultas, quejas y/o sugerencias a nuestro mail.</p>
+            <a href="mailto:email@ejemplo.com"><i class="fa-regular fa-envelope me-2"></i>contacto@musicstore.com</a>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <p class="faq">¿Tenés dudas? Consultá <a href="#">Preguntas Frecuentes</a></p>
+        </div>
+
+        
+        
+      </section>
+      
+    </main>
+
+    <footer class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg colorSecundario">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex justify-content-between align-items-center gap-5">
+              <a class="inicio" href="index.html">
+                <img class="logo" src="/assets/logo-oscuro-2c49036c.png" alt="Logo">
+              </a>
+
+              <p class="m-0">Buscanos en nuestras redes:</p>
+              <ul class="d-flex m-0 p-0 redes">
+                <li class="me-4">
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-x-twitter fs-5"></i>
+                  </a>
+                </li>
+
+                <li class="me-4">
+                  <a href="https://linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center contactoIndex">
+              <h5 class="mb-3">Contacto</h5>
+              <p class="m-0">9 de Julio 112</p>
+              <p class="m-0">Concepción, Tucumán (C.P. 4146)</p>
+              <a href="contacto.html">
+                <i class="fa-regular fa-comments me-2"></i>
+              Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <ul class="d-flex justify-content-evenly align-items-center w-50 list-unstyled m-0">
+            <li><a class="hvr-underline-from-left p-2" href="#">Servicios</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Seguridad</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Defensa del<br>Consumidor</a></li>
+            <li class="text-center"><a class="hvr-underline-from-left p-2" href="#">Terminos y<br>Condiciones</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="#">Privacidad</a></li>
+            <li><a class="hvr-underline-from-left p-2" href="nosotros.html">¿Quiénes somos?</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center justify-content-evenly qr">
+            <p class="m-0">&copy; CopyRight - Music Store S.A. 2023</p>
+            <img src="/assets/data-fiscal-5828cebd.jpeg" alt="QR Data Fiscal" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
