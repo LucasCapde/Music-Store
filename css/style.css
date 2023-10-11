@@ -13,6 +13,15 @@ body,
   font-family: 'Roboto', sans-serif;
 }
 
+body{
+  transition: .3s ease all;
+}
+
+body.dark{
+  background: #212529;
+  color: #f1f1f1;
+}
+
 h1, h2{
   font-family: 'Maven Pro', sans-serif;
   color: var(--rojo);
@@ -23,6 +32,52 @@ h1, h2{
 nav,
 footer{
   background-color: var(--color-principal-header-footer); 
+}
+
+/**------------------ SWITCH DARK ------------------*/
+
+button.switch{
+  background: #343d5b;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  padding: 0;
+}
+
+button.switch::after{
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 50%;
+  box-shadow: 0 0 .2rem .2rem rgba(0, 0, 0, .2);
+}
+
+button.active{
+  background: #fca311;
+  color: #000;
+}
+
+button.active::after{
+  right: 0;
+  left: unset;
+}
+
+button.switch span{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: block;
+  background: none;
+  color: #fff;
 }
 
 /* *------------------ Efectos hover ------------------ */
@@ -196,7 +251,11 @@ input.form-control{
   text-align: center;
 }
 
-#btn-user{
+.icono-blanco{
+  color: #fafafa;
+}
+
+.icono-blanco:hover{
   color: #fafafa;
 }
 
@@ -219,6 +278,18 @@ input#gridCheck1{
   background-color: #202020;
 }
 
+body.dark .modal-content{
+  background-color: #212529;
+}
+
+body.dark .modal-content a{
+  color: #fafafa;
+}
+
+body.dark .modal-content a:hover{
+  color: hsl(0, 0%, 90%);
+}
+
 .btn-modal{
   background: var(--rojo);
   color: #fafafa;
@@ -236,8 +307,8 @@ input#gridCheck1{
   text-decoration: none;
 }
 
-#carrito-numero{
-  display: inline-block;
+#carrito-contador{
+  display: none;
   background-color: #e9322e;
   width: 20px;
   height: 20px;
@@ -250,7 +321,7 @@ input#gridCheck1{
   font-weight: 700;
 }
 
-/* *-----Header - nav ----- */
+/* *----- Header - nav ----- */
 
 .colorSecundario{
   background-color: var(--color-secundario-header-footer);
@@ -305,6 +376,10 @@ input#gridCheck1{
   border-radius: 5px;
 }
 
+body.dark .categoria{
+  background: hsl(210, 11%, 12%);
+}
+
 .imagenCard{
   width: 100%;
   padding: 15px;
@@ -328,6 +403,15 @@ input#gridCheck1{
   border-radius: 10px;
   width: 100%;
   background-color: #fafafa;
+}
+
+body.dark .card{
+  background: #212529;
+  color: #fafafa;
+}
+
+body.dark h6.text-body-secondary{
+  color: hsl(0, 0%, 80%);
 }
 
 .card:hover{
@@ -406,9 +490,17 @@ footer .inicio + p{
   padding: 15px;
 }
 
+body.dark .encabezadoCarrito{
+  background: #595959;
+}
+
 .encabezadoCarrito a{
   margin-right: 65px;
   font-weight: 300;
+}
+
+body.dark .encabezadoCarrito a{
+  color: hsl(0, 0%, 95%);
 }
 
 .encabezadoCarrito h3{
@@ -417,6 +509,15 @@ footer .inicio + p{
 
 .carrito{
   width: 90%;
+}
+
+body.dark .carrito input{
+  background: hsl(210, 11%, 30%);
+  color: #fafafa;
+}
+
+body.dark .carrito input::placeholder{
+  color: #fafafa;
 }
 
 .productosEnCarrito{
@@ -506,10 +607,22 @@ footer .inicio + p{
   width: 75%;
 }
 
+.borrar-producto-compra{
+  cursor: pointer;
+}
+
 /* !--------------- CONTACTO --------------- */
 
 .contacto{
   margin: 50px 0;
+}
+
+body.dark .contacto a{
+  color: #f1f1f1;
+}
+
+body.dark .contacto a:hover{
+  color: hsl(0, 0%, 80%);
 }
 
 .col-12 h2{
@@ -574,7 +687,6 @@ footer .inicio + p{
 
 
 /* --------------- NOSOTROS --------------- */
-
 .quienesSomos{
   margin-bottom: 8em;
 }

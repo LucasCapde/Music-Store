@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Proyecto Integrador - Etapa 1 | Nosotros</title>
   </head>
   <body>
@@ -62,11 +63,23 @@
               </ul>
             </div>
 
-            <!-- Descarga la app e ingreso/crear usuario -->
+            <!-- Descarga la app -->
             
-            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2">Descarga la app</a>
-            <button type="button" class="btn me-3 p-0" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class="fa-regular fa-user hvr-pop"></i>
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2"
+            >Descarga la app</a
+            >
+            
+            <!-- Botón para modo oscuro -->
+            
+            <button class="switch me-3 active" id="switch">
+              <span><i class="fa-solid fa-sun"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </button>
+            
+            <!-- ingresar/crear usuario -->
+            
+            <button type="button" class="btn me-3 p-0 icono-blanco" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-regular fa-user fa-xl hvr-pop"></i>
             </button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,12 +132,45 @@
             </div>
 
             <!-- Carrito -->
+            
+            <div class="d-flex">
+              <div class="dropdown dropstart">
+                <a
+                  class="nav-link icono-blanco"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-cart-shopping fa-xl hvr-pop"></i>
+                  <span id="carrito-numero">4</span>
+                  <!-- TODO: Cambiar con JS -->
+                </a>
+                <ul id="carrito" class="dropdown-menu mx-2">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
 
-            <a href="cart.html" class="list-group-item me-3">
-              <i class="fa-solid fa-cart-shopping hvr-pop"></i>
-              <span id="carrito-numero">4</span>
-            </a>
-
+                  <div
+                    class="d-grid gap-2 d-md-block justify-content-md-center ms-1"
+                  >
+                    <button id="vaciar-carrito" class="btn btn-primary mx-1">
+                      Vaciar carrito
+                    </button>
+                    <button id="procesar-pedido" class="btn btn-success">
+                      Procesar compra
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -283,6 +329,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>

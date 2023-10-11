@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/c7393ce70b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Proyecto Integrador - Etapa 1 | Carrito</title>
   </head>
   <body>
@@ -62,11 +63,26 @@
               </ul>
             </div>
 
-            <!-- Descarga la app e ingreso/crear usuario -->
+
+
+
+            <!-- Descarga la app -->
             
-            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2">Descarga la app</a>
-            <button type="button" class="btn me-3 p-0" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class="fa-regular fa-user hvr-pop"></i>
+            <a href="#" class="list-group-item me-3 hvr-underline-from-left p-2"
+            >Descarga la app</a
+            >
+            
+            <!-- Botón para modo oscuro -->
+            
+            <button class="switch me-3 active" id="switch">
+              <span><i class="fa-solid fa-sun"></i></span>
+              <span><i class="fa-solid fa-moon"></i></span>
+            </button>
+            
+            <!-- ingresar/crear usuario -->
+            
+            <button type="button" class="btn me-3 p-0 icono-blanco" id="btn-user" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-regular fa-user fa-xl hvr-pop"></i>
             </button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -117,14 +133,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Carrito -->
-
-            <a href="cart.html" class="list-group-item me-3">
-              <i class="fa-solid fa-cart-shopping hvr-pop"></i>
-              <span id="carrito-numero">4</span>
-            </a>
-
           </div>
         </div>
       </nav>
@@ -179,129 +187,42 @@
       <section>
         <div class="container-fluid encabezadoCarrito">
           <div class="d-flex justify-content-between align-items-center p-3">
-            <h3 class="text-uppercase">Tu Carrito (4 Productos)</h2>
+            <h3 class="text-uppercase" id="articulos"></h2>
             <a class="linkCorregido text-uppercase" href="../index.html"><i class="fa-solid fa-chevron-left me-2"></i>Continuar Comprando</a>
           </div>
         </div>
 
         <div class="container-fluid d-flex justify-content-around carrito">
-          <div class="productosEnCarrito my-4">
-            <div class="producto d-flex justify-content-evenly px-2 mt-3">
-              <div class="imagenProducto">
-                <img src="../img/products/Ahi-vamos.webp" class="card-img-top" alt="...">
-                <p class="text-center">En stock</p>
-              </div>
-              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
-                <h4 class="">Ahí Vamos</h4>
-                <h5 class="precio">$999.99</h5>
-                <p class="mb-1"><span>Artista:</span> Gustavo Cerati</p>
-                <p class="mb-1"><span>Año de Lanzamiento:</span> 2006</p>
-                <p class="mb-1"><span>Formato:</span> CD</p>
-                <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
-                  <a href="#" class="linkCorregido px-2">Eliminar</a>
-                  <a href="#" class="linkCorregido px-2">Guardar</a>
-                  <a href="#" class="linkCorregido px-2">Comparar con artículos similares</a>
-                  <a href="#" class="linkCorregido px-2">Compartir</a>
-                </div>
-                
-                <p class="ms-3 my-2">10 disponibles</p>
-              </div>
-            </div>
+          <div class="productosEnCarrito my-4" id="lista-compra">
+            <h4 class="text-center display-6 text-danger" id="productos-agregados">No tenés productos agregados en el carrito</h4>            
+            
+            <!-- Se agregan dinamicamente con JS -->
 
-            <div class="producto d-flex justify-content-evenly px-2 mt-3">
-              <div class="imagenProducto">
-                <img src="../img/products/internac-oasis.webp" class="card-img-top" alt="...">
-                <p class="text-center">En stock</p>
-              </div>
-              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
-                <h4 class="m-0">(What's the story) Morning Glory ?</h4>
-                <h5 class="precio">$999.99</h5>
-                <p class="mb-1"><span>Artista:</span> Oasis</p>
-                <p class="mb-1"><span>Año de Lanzamiento:</span> 1995</p>
-                <p class="mb-1"><span>Formato:</span> CD</p>
-                <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
-                  <a href="#" class="linkCorregido px-2">Eliminar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
-                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
-                </div>
-                
-                <p class="ms-3 my-2">10 disponibles</p>
-              </div>
-            </div>
-
-            <div class="producto d-flex justify-content-evenly px-2 mt-3">
-              <div class="imagenProducto">
-                <img src="../img/products/dvd-gardelitos.webp" class="card-img-top" alt="...">
-                <p class="text-center">En stock</p>
-              </div>
-              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
-                <h4 class="m-0">Gardelitografía</h4>
-                <h5 class="precio">$999.99</h5>
-                <p class="mb-1"><span>Artista:</span> Los Gardelitos</p>
-                <p class="mb-1"><span>Año de Lanzamiento:</span> 2006</p>
-                <p class="mb-1"><span>Formato:</span> BoxSet</p>
-                <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
-                  <a href="#" class="linkCorregido px-2">Eliminar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
-                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
-                </div>
-                
-                <p class="ms-3 my-2">10 disponibles</p>
-              </div>
-            </div>
-
-            <div class="producto d-flex justify-content-evenly px-2 mt-3">
-              <div class="imagenProducto">
-                <img src="../img/products/vinilo-harry.webp" class="card-img-top" alt="...">
-                <p class="text-center">En stock</p>
-              </div>
-              <div class="detalleProducto ms-2 mt-1 d-flex flex-column justify-content-start">
-                <h4 class="m-0">Harry's House</h4>
-                <h5 class="precio">$999.99</h5>
-                <p class="mb-1"><span>Artista:</span> Harry Styles</p>
-                <p class="mb-1"><span>Año de Lanzamiento:</span> 2022</p>
-                <p class="mb-1"><span>Formato:</span> Vinilo</p>
-                <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-primary">Cantidad: 1 <i class="fa-solid fa-arrow-down"></i></button>
-                  <a href="#" class="linkCorregido px-2">Eliminar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Guardar</a>
-                  <a href="#" class="linkCorregido border-start px-2">Comparar con artículos similares</a>
-                  <a href="#" class="linkCorregido border-start px-2">Compartir</a>
-                </div>
-                
-                <p class="ms-3 my-2">10 disponibles</p>
-              </div>
-            </div>
           </div>
 
           <div class="resumen mt-4">
             <div class="detalleResumen d-flex flex-column p-3">
               <h4 class="text-uppercase">Resumen del pedido</h4>
               <div class="d-flex justify-content-between">
-                <p>4 Productos</p>
-                <p><span>$999.99</span></p>
+                <p>Productos</p>
+                <p><span id="sub-total"></span></p>
               </div>
               <div class="d-flex justify-content-between">
-                <p>Envío</p>
-                <p class="verde">Gratis</p>
+                <p>Envío (10%)</p>
+                <p class="text-danger" id="envio"></p>
               </div>
               <div class="d-flex justify-content-between">
                 <p>Total</p>
-                <p><span>$999.99</span></p>
+                <p><span id="total"></span></p>
               </div>
               <input type="text" placeholder="Ingrese su código de Promoción">
               <h5 class="text-uppercase mt-2">Medios de Pago Aceptados</h5>
               <div class="d-flex justify-content-start mb-4">
-                <img src="../img/icons/amex.svg" alt="">
-                <img src="../img/icons/hsbc.svg" alt="">
-                <img src="../img/icons/mastercard.svg" alt="">
-                <img src="../img/icons/santander.svg" alt="">
-                <img src="../img/icons/visa.svg" alt="">
+                <img src="../img/icons/amex.svg" alt="American Express">
+                <img src="../img/icons/hsbc.svg" alt="HSBC">
+                <img src="../img/icons/mastercard.svg" alt="MasterCard">
+                <img src="../img/icons/santander.svg" alt="Santander">
+                <img src="../img/icons/visa.svg" alt="Visa">
               </div>
               <button class="btn btn-danger text-uppercase">Ir a pagar</button>
             </div>
@@ -312,64 +233,59 @@
       <section>
         <h2 class="encabezado">Nuestras Recomendaciones</h2>
         <div class="d-flex justify-content-center">
-          <div class="contenedor recomendados d-flex justify-content-evenly">
+          <div class="contenedor recomendados d-flex justify-content-evenly" id="lista-productos">
             <div class="card">
-              <img src="../img/products/cd-am-live.webp" class="imagenCard" alt="...">
+              <img src="../img/products/cd-am-live.webp" class="imagenCard" alt="Portada álbum">
               <div class="card-body">
                 <h5 class="card-title">$999.99</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
                 <p class="card-text">Arctic Monkeys - Live At The Royal Albert Hall (2020) Cd Nuevo</p>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+                <a href="#" class="btn btn-primary agregar-carrito">Agregar al Carrito</a>                
               </div>
             </div>
     
             <div class="card">
-              <img src="../img/products/cd-eddie-vader.webp" class="imagenCard" alt="...">
+              <img src="../img/products/cd-eddie-vader.webp" class="imagenCard" alt="Portada álbum">
               <div class="card-body">
                 <h5 class="card-title">$999.99</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
                 <p class="card-text">Eddie Vedder - Ukulele Songs (2011) Cd Cerrado Original</p>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+                <a href="#" class="btn btn-primary agregar-carrito">Agregar al Carrito</a>                
               </div>
             </div>
             
             <div class="card">
-              <img src="../img/products/cd-david-bowie.webp" class="imagenCard" alt="...">
+              <img src="../img/products/cd-david-bowie.webp" class="imagenCard" alt="Portada álbum">
               <div class="card-body">
                 <h5 class="card-title">$999.99</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
                 <p class="card-text">David Bowie - Brilliant Adventure Ep (2021) Cd Nuevo Importado Rsd</p>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+                <a href="#" class="btn btn-primary agregar-carrito">Agregar al Carrito</a>                
               </div>
             </div>
             
             <div class="card">
-              <img src="../img/products/cd-megadeth.webp" class="imagenCard" alt="...">
+              <img src="../img/products/cd-megadeth.webp" class="imagenCard" alt="Portada álbum">
               <div class="card-body">
                 <h5 class="card-title">$999.99</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
                 <p class="card-text">Megadeth - Warheads On Foreheads (3 Cd's) Nuevo Original</p>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+                <a href="#" class="btn btn-primary agregar-carrito">Agregar al Carrito</a>                
               </div>
             </div>
             
             <div class="card">
-              <img src="../img/products/cd-qotsa.webp" class="imagenCard" alt="...">
+              <img src="../img/products/cd-qotsa.webp" class="imagenCard" alt="Portada álbum">
               <div class="card-body">
                 <h5 class="card-title">$999.99</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">6 cuotas de $999.99</h6>
                 <p class="card-text">Queens Of The Stone Age - Villains (2017) Cd Nuevo Edición Especial</p>
-                <a href="#" class="btn btn-primary">Agregar al Carrito</a>                
+                <a href="#" class="btn btn-primary agregar-carrito">Agregar al Carrito</a>                
               </div>
             </div>
             </div>
         </div>
-      </section>
-        
-      
-      
-      
-      
+      </section>      
     </main>
 
     <footer class="container-fluid p-0">
