@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+@import 'bootstrap';
 :root{
   --color-principal-header-footer: #19171a;
   --color-secundario-header-footer: #2f2b31;
   --hover: #00b300;
   --rojo: #e9322e;
 }
+
 
 
 body,
